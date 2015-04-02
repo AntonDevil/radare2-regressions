@@ -656,3 +656,37 @@ CMDS="iz"
 EXPECT='vaddr=0x004005c4 paddr=0x000005c4 ordinal=000 sz=12 len=11 section=.rodata type=a string=Hello World
 '
 run_test
+
+NAME='iI compile time (file pe32)'
+FILE=../bins/pe/ch22.exe
+ARGS=
+CMDS="iI"
+EXPECT='file     
+type     EXEC (Executable file)
+pic      true
+canary   false
+nx       true
+crypto   false
+va       true
+root     pe
+class    PE32
+lang     msil
+arch     x86
+bits     32
+machine  i386
+os       windows
+subsys   Windows GUI
+endian   little
+strip    true
+static   false
+linenum  false
+lsyms    false
+relocs   false
+rpath    
+size     26624
+guid     91E118E881F149CA9016380C0FE30B571
+dbg_file c:\users\baptiste\documents\visual studio 2012\Projects\CrackMe\CrackMe\obj\Release\CrackMe.pdb
+compiled Thu Sep 11 22:21:46 2014
+
+'
+run_test
